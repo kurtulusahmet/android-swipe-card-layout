@@ -1,6 +1,7 @@
 package com.kurtulusdev.androidswipecardlayout.library;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -16,6 +17,8 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
+import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 
 /**
@@ -59,6 +62,15 @@ public class SwipeCardLayout extends FrameLayout {
 
         newCard.setTitle(title);
         newCard.setImage(imageurl);
+        return newCard;
+    }
+
+    //Drawable assets ..vb
+    public CardObject createCardObject(String title, int resource_id){
+        CardObject newCard = new CardObject();
+
+        newCard.setTitle(title);
+        newCard.setImageResourceId(resource_id);
 
         return newCard;
     }
@@ -128,8 +140,11 @@ public class SwipeCardLayout extends FrameLayout {
             if(holder.data == null){
                 holder.data = cardList.get(x);
                 holder.textView.setText(holder.data.getTitle());
-                Log.e("image url", holder.data.getImage());
-                Glide.with(context).load(holder.data.getImage()).into(holder.imageView);
+                if (holder.data.getImage() == null){
+                    holder.imageView.setImageResource(holder.data.getImageResourceId());
+                }else{
+                    Glide.with(context).load(holder.data.getImage()).into(holder.imageView);
+                }
             }
         }
     }
@@ -150,7 +165,7 @@ public class SwipeCardLayout extends FrameLayout {
         }, 100);
     }
 
-    private void topCardClicked() {
+    public void topCardClicked() {
         Toast.makeText(context, "Click", Toast.LENGTH_SHORT).show();
     }
 
