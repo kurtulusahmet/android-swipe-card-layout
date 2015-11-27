@@ -27,14 +27,6 @@ public class CardObject {
         this.image = image;
     }
 
-    public Drawable getImageDrawable() {
-        return imageDrawable;
-    }
-
-    public void setImageDrawable(Drawable imageDrawable) {
-        this.imageDrawable = imageDrawable;
-    }
-
     public int getImageResourceId() {
         return imageResourceId;
     }

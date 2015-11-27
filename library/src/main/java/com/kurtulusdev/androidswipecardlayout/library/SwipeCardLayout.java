@@ -1,8 +1,6 @@
 package com.kurtulusdev.androidswipecardlayout.library;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -17,8 +15,6 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
-import java.io.InputStream;
-import java.net.URL;
 import java.util.ArrayList;
 
 /**
@@ -56,7 +52,7 @@ public class SwipeCardLayout extends FrameLayout {
         mScreenHeight = getResources().getDisplayMetrics().heightPixels;
     }
 
-    //Drawable assets ..vb
+    //String image url
     public CardObject createCardObject(String title, String imageurl){
         CardObject newCard = new CardObject();
 
@@ -65,7 +61,7 @@ public class SwipeCardLayout extends FrameLayout {
         return newCard;
     }
 
-    //Drawable assets ..vb
+    //Resource id
     public CardObject createCardObject(String title, int resource_id){
         CardObject newCard = new CardObject();
 
