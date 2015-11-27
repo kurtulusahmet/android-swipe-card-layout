@@ -26,16 +26,17 @@ public class MainActivity extends AppCompatActivity {
 
 
         ArrayList<CardObject> cardList = new ArrayList<CardObject>();
+        cardList.add(swipeCardLayout.createCardObject("Title #0", R.mipmap.basket5));
         cardList.add(swipeCardLayout.createCardObject("Title #1", "http://lorempixel.com/400/300/sports/1/"));
-        cardList.add(swipeCardLayout.createCardObject("Title #2", R.mipmap.ic_launcher));
+        cardList.add(swipeCardLayout.createCardObject("Title #2", R.mipmap.basket1));
         cardList.add(swipeCardLayout.createCardObject("Title #3", "http://lorempixel.com/400/300/sports/2/"));
-        cardList.add(swipeCardLayout.createCardObject("Title #4", R.mipmap.ic_launcher));
+        cardList.add(swipeCardLayout.createCardObject("Title #4", R.mipmap.basket2));
         cardList.add(swipeCardLayout.createCardObject("Title #5", "http://lorempixel.com/400/300/sports/3/"));
-        cardList.add(swipeCardLayout.createCardObject("Title #6", R.mipmap.ic_launcher));
+        cardList.add(swipeCardLayout.createCardObject("Title #6", R.mipmap.basket3));
         cardList.add(swipeCardLayout.createCardObject("Title #7", "http://lorempixel.com/400/300/sports/4/"));
-        cardList.add(swipeCardLayout.createCardObject("Title #8", R.mipmap.ic_launcher));
+        cardList.add(swipeCardLayout.createCardObject("Title #8", R.mipmap.basket4));
         cardList.add(swipeCardLayout.createCardObject("Title #9", "http://lorempixel.com/400/300/sports/5/"));
-        cardList.add(swipeCardLayout.createCardObject("Title #10", R.mipmap.ic_launcher));
+
 
         swipeCardLayout.addCards(cardList);
         swipeCardLayout.renderCards();
