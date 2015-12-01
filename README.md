@@ -27,7 +27,7 @@ Alternatively, clone the repo and add `library` as a module to your project.
 1 - Create a RelativeLayout in Activity
 	
 ```java
-// in Activity Context and
+// in Activity Context
 scContainer = (RelativeLayout) findViewById(R.id.swipeable_cards_container);
 
         SwipeCardLayout swipeCardLayout = new SwipeCardLayout(getApplicationContext(),scContainer);
