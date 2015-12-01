@@ -162,7 +162,7 @@ public class SwipeCardLayout extends FrameLayout {
     }
 
     public void topCardClicked() {
-        Toast.makeText(context, "Click", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, "Click", Toast.LENGTH_SHORT).show();
     }
 
     private void topCardLeft() {
